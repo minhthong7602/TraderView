@@ -329,7 +329,7 @@
     width: auto;
     opacity: 1;
     visibility: visible;
-    transition: all 0.75s;
+    transition: all 0.3s;
 }
 .list-item__3-column {
     display: grid;
