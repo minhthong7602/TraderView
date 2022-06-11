@@ -296,7 +296,9 @@
     background: linear-gradient(45deg, rgba(84, 114, 246, 0.1) 0%, rgba(221, 62, 240, 0.1) 100%);
     display: inline-block;
 }
-
+.social-media a:hover{
+    background: linear-gradient(45deg, #5472F6 0%, #DD3EF0 100%);
+}
 .list-item__3-column {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
