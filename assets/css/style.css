@@ -327,19 +327,16 @@
     background: linear-gradient(45deg, #5472F6 0%, #DD3EF0 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    width: 0;
-    opacity: 0;
-    visibility: hidden;
+    height: 0;
 }
 .social-media a:hover{
     width: auto;
+    background: linear-gradient(#131313, #131313) padding-box, linear-gradient(45deg, #5472F6 0%, #DD3EF0 100%) border-box;
 }
 .social-media a:hover span{
     margin-left: 16px;
-    width: auto;
-    opacity: 1;
-    visibility: visible;
-    transition: all 0.3s;
+    height: auto;
+    transition: all 0.25s;
 }
 .list-item__3-column {
     display: grid;

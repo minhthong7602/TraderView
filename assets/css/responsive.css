@@ -66,7 +66,20 @@
 	.header{
         padding: 8px 0;
     }
-	.btn-menu img{
+	.btn-menu .icon-normal {
+		width: 27px;
+	}
+	.btn-menu .icon-hover {
+		height: 0;
+	}
+	
+	.btn-menu:hover .icon-normal, .btn-menu[aria-expanded="true"] .icon-normal {
+		height: 0;
+		width: 0;
+	}
+	
+	.btn-menu:hover .icon-hover, .btn-menu[aria-expanded="true"] .icon-hover{
+		height: auto;
 		width: 27px;
 	}
 	
