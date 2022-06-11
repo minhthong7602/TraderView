@@ -70,8 +70,12 @@
 }
 
 .btn-trade:hover {
-    color: #925bf3;
     background: #fff;
+}
+.btn-trade:hover span{
+    background: linear-gradient(45deg, #5472F6 0%, #DD3EF0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .btn-clear {
@@ -179,8 +183,18 @@
 .section1 .external-info .item * {
     position: relative;
     z-index: 2;
+    font-weight: bold;
 }
 
+.section1 .external-info .item:hover {
+    background: #fff;
+    cursor: pointer;
+}
+.section1 .external-info .item:hover *{
+    background: linear-gradient(45deg, #5472F6 0%, #DD3EF0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 .section2 {
     margin-bottom: 160px;
     position: relative;
@@ -279,8 +293,7 @@
 }
 
 .social-media {
-    width: 49px;
-    text-align: center;
+    text-align: right;
     position: fixed;
     right: 0;
     top: 225px;
@@ -289,15 +302,34 @@
 }
 
 .social-media a {
-    width: 49px;
-    height: 49px;
     border-radius: 10px 0px 0px 10px;
     margin: 1px 0;
-    background: linear-gradient(45deg, rgba(84, 114, 246, 0.1) 0%, rgba(221, 62, 240, 0.1) 100%);
-    display: inline-block;
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+    font-weight: bold;
+    background: linear-gradient(#25223e, #25223e) padding-box, linear-gradient(45deg, #5472F6 0%, #DD3EF0 100%) border-box;
+    border: 1px solid transparent;
+    padding: 8px;
+    width: 49px;
+}
+.social-media a span{
+    background: linear-gradient(45deg, #5472F6 0%, #DD3EF0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: 0;
+    opacity: 0;
+    visibility: hidden;
 }
 .social-media a:hover{
-    background: linear-gradient(45deg, #5472F6 0%, #DD3EF0 100%);
+    width: auto;
+}
+.social-media a:hover span{
+    margin-left: 16px;
+    width: auto;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.75s;
 }
 .list-item__3-column {
     display: grid;
@@ -341,6 +373,7 @@
     left: 50%;
     transform: translateX(-50%);
     bottom: -18px;
+    border: 1px solid #fff;
 }
 
 .btn-view span {
@@ -349,6 +382,15 @@
     -webkit-text-fill-color: transparent;
 }
 
+.btn-view:hover {
+    background: linear-gradient(90deg, #5472F6 0%, #DD3EF0 100%);
+    color: #fff;
+}
+.btn-view:hover span {
+    background: transparent;
+    -webkit-background-clip:  unset;
+    -webkit-text-fill-color: unset;
+}
 .section3 {
     padding-top: 140px;
 }
@@ -509,7 +551,6 @@
     padding: 5px 24px;
     color: #fff;
 }
-
 .footer {
     border-top: 1px solid #333;
     padding: 80px 0;
