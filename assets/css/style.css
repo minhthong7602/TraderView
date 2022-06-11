@@ -186,9 +186,19 @@
     font-weight: bold;
 }
 
+.section1 .external-info .item .icon-hover{
+    height: 0;
+}
+
 .section1 .external-info .item:hover {
     background: #fff;
     cursor: pointer;
+}
+.section1 .external-info .item:hover .icon-hover{
+    height: auto;
+}
+.section1 .external-info .item:hover .icon-normal{
+    height: 0;
 }
 .section1 .external-info .item:hover *{
     background: linear-gradient(45deg, #5472F6 0%, #DD3EF0 100%);
@@ -686,3 +696,15 @@
     width: 475px;
     margin: 0 auto;
 }
+.btn-menu .icon-hover {
+    height: 0;
+}
+
+.btn-menu:hover .icon-normal, .btn-menu[aria-expanded="true"] .icon-normal {
+    height: 0;
+}
+
+.btn-menu:hover .icon-hover, .btn-menu[aria-expanded="true"] .icon-hover{
+    height: auto;
+}
+
