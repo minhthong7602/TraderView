@@ -183,6 +183,7 @@
 .section1 .external-info .item:hover {
     border-color: #fff;
     cursor: pointer;
+    background: linear-gradient(270deg, rgb(37 34 62), rgb(19 19 18 / 90%)) padding-box, linear-gradient(45deg, #5472F6 0%, #DD3EF0 100%) border-box;
 }
 
 .section1 .external-info .item:hover .icon-hover {
@@ -563,7 +564,6 @@
     border-top: 1px solid #333;
     padding: 80px 0;
     position: relative;
-    overflow: hidden;
 }
 
 .footer h2 {
@@ -827,12 +827,14 @@
 }
 .divRow:after {
     content: '';
-    background: linear-gradient(90deg, #5472F6 0%, #DD3EF0 100%);
+    background: url(../images/icons/line.svg);
     height: 1px;
     left: 0;
     right: 0;
     bottom: 0;
     position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .section8{
     margin-bottom: 120px;
