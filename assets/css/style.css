@@ -72,7 +72,8 @@
 .btn-trade:hover {
     background: #fff;
 }
-.btn-trade:hover span{
+
+.btn-trade:hover span {
     background: linear-gradient(45deg, #5472F6 0%, #DD3EF0 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -164,20 +165,9 @@
     flex-flow: column;
     justify-content: center;
     margin: 16px;
-    background: linear-gradient(45deg, #5472F6 0%, #DD3EF0 100%);
+    background: linear-gradient(45deg, rgb(37 34 62), rgb(19 19 18 / 90%)) padding-box, linear-gradient(45deg, #5472F6 0%, #DD3EF0 100%) border-box;
+    border: 1px solid transparent;
     position: relative;
-}
-
-.section1 .external-info .item::before {
-    content: '';
-    background: #25223e;
-    top: 1px;
-    bottom: 1px;
-    left: 1px;
-    right: 1px;
-    position: absolute;
-    border-radius: 25px;
-    z-index: 1;
 }
 
 .section1 .external-info .item * {
@@ -186,25 +176,29 @@
     font-weight: bold;
 }
 
-.section1 .external-info .item .icon-hover{
+.section1 .external-info .item .icon-hover {
     height: 0;
 }
 
 .section1 .external-info .item:hover {
-    background: #fff;
+    border-color: #fff;
     cursor: pointer;
 }
-.section1 .external-info .item:hover .icon-hover{
+
+.section1 .external-info .item:hover .icon-hover {
     height: auto;
 }
-.section1 .external-info .item:hover .icon-normal{
+
+.section1 .external-info .item:hover .icon-normal {
     height: 0;
 }
-.section1 .external-info .item:hover *{
+
+.section1 .external-info .item:hover * {
     background: linear-gradient(45deg, #5472F6 0%, #DD3EF0 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 .section2 {
     margin-bottom: 160px;
     position: relative;
@@ -323,21 +317,25 @@
     padding: 8px;
     width: 49px;
 }
-.social-media a span{
+
+.social-media a span {
     background: linear-gradient(45deg, #5472F6 0%, #DD3EF0 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     height: 0;
 }
-.social-media a:hover{
+
+.social-media a:hover {
     width: auto;
     background: linear-gradient(#131313, #131313) padding-box, linear-gradient(45deg, #5472F6 0%, #DD3EF0 100%) border-box;
 }
-.social-media a:hover span{
+
+.social-media a:hover span {
     margin-left: 16px;
     height: auto;
     transition: all 0.25s;
 }
+
 .list-item__3-column {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -393,11 +391,13 @@
     background: linear-gradient(90deg, #5472F6 0%, #DD3EF0 100%);
     color: #fff;
 }
+
 .btn-view:hover span {
     background: transparent;
-    -webkit-background-clip:  unset;
+    -webkit-background-clip: unset;
     -webkit-text-fill-color: unset;
 }
+
 .section3 {
     padding-top: 140px;
 }
@@ -558,6 +558,7 @@
     padding: 5px 24px;
     color: #fff;
 }
+
 .footer {
     border-top: 1px solid #333;
     padding: 80px 0;
@@ -678,6 +679,7 @@
     font-weight: 700;
     display: initial;
 }
+
 .footer:before {
     content: '';
     background: radial-gradient(49.8% 49.95% at 40.28% 59.25%, #FFFFFF 0%, rgba(247, 247, 247, 0.97) 2%, rgba(190, 190, 190, 0.74) 13%, rgba(139, 139, 139, 0.54) 25%, rgba(96, 96, 96, 0.38) 37%, rgba(61, 61, 61, 0.24) 49%, rgba(34, 34, 34, 0.14) 62%, rgba(15, 15, 15, 0.06) 74%, rgba(4, 4, 4, 0.01) 87%, rgba(0, 0, 0, 0) 100%);
@@ -688,20 +690,220 @@
     top: -5px;
     left: 0;
     right: 0;
-    z-index: 999;
+    z-index: 1;
     height: 6px;
     width: 475px;
     margin: 0 auto;
 }
+
 .btn-menu .icon-hover {
     height: 0;
 }
 
-.btn-menu:hover .icon-normal, .btn-menu[aria-expanded="true"] .icon-normal {
+.btn-menu:hover .icon-normal,
+.btn-menu[aria-expanded="true"] .icon-normal {
     height: 0;
 }
 
-.btn-menu:hover .icon-hover, .btn-menu[aria-expanded="true"] .icon-hover{
+.btn-menu:hover .icon-hover,
+.btn-menu[aria-expanded="true"] .icon-hover {
     height: auto;
 }
 
+.list-item__allTime {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: 1px;
+    max-width: 1240px;
+    margin: 0 auto;
+    text-align: center;
+    background: linear-gradient(45deg, rgb(37 34 62), rgb(19 19 18 / 90%)) padding-box, linear-gradient(45deg, #5472F6 0%, #DD3EF0 100%) border-box;
+    border: 1px solid transparent;
+    border-radius: 25px;
+    padding: 30px 0;
+}
+
+.list-item__allTime .item h3,
+.list-item__allTime .item p {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 0;
+    line-height: 24px;
+    letter-spacing: -0.05em;
+}
+
+.list-item__allTime .item p {
+    opacity: 0.5;
+    font-weight: 400;
+}
+
+.list-item__allTime .item {
+    position: relative;
+}
+
+.list-item__allTime .item:after {
+    content: '';
+    background: linear-gradient(90deg, #5472F6 0%, #DD3EF0 100%);
+    width: 1px;
+    height: 100%;
+    left: 100%;
+    top: 0;
+    position: absolute;
+}
+
+.list-item__allTime .item:last-child:after {
+    display: none;
+}
+
+.section6 {
+    padding-top: 80px;
+    margin-bottom: 90px;
+}
+
+.divTable {
+    display: table;
+    max-width: 1240px;
+    border-spacing: 5px;
+    width: 100%;
+    margin: 0 auto;
+    letter-spacing: -0.05em;
+    font-weight: bold;
+}
+.headRow {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 1px;
+    max-width: 1240px;
+    margin: 0 auto;
+    text-align: center;
+    background: linear-gradient(45deg, rgb(37 34 62), rgb(19 19 18 / 90%)) padding-box, linear-gradient(45deg, #5472F6 0%, #DD3EF0 100%) border-box;
+    border: 1px solid transparent;
+    border-radius: 25px;
+    letter-spacing: -0.05em;
+    font-weight: bold;
+}
+.headRow .divCell{
+    padding: 30px;
+    position: relative;
+}
+.divRow .divCell{
+    padding: 30px 0;
+    position: relative;
+}
+
+.divRow{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 1px;
+    max-width: 1240px;
+    margin: 0 16px;
+    text-align: center;
+    position: relative;
+}
+
+.headRow .divCell:not(:last-child):after {
+    content: '';
+    background: linear-gradient(90deg, #5472F6 0%, #DD3EF0 100%);
+    width: 1px;
+    height: 100%;
+    left: 100%;
+    top: 0;
+    position: absolute;
+}
+.divCell .flex{
+    display: flex;
+    align-items: center;
+}
+.divCell .flex .bg-2 {
+    background: #D9D9D9;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+}
+.divCell .flex p{
+    flex: 1;
+    text-align: center;
+    margin-left: -42px;
+}
+.divRow:after {
+    content: '';
+    background: linear-gradient(90deg, #5472F6 0%, #DD3EF0 100%);
+    height: 1px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
+.section8{
+    margin-bottom: 120px;
+}
+.btn-loadMore {
+    background: linear-gradient(45deg, #5472F6 0%, #DD3EF0 100%);
+    border-radius: 10px;
+    padding: 5px 20px;
+    margin: 52px auto 0;
+    display: inherit;
+    border: 1px solid transparent;
+}
+.btn-loadMore:hover{
+    border-color: #fff;
+}
+.list-chart {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 32px;
+    row-gap: 7px;
+    margin-bottom: 80px;
+}
+.list-chart img{
+    max-width: 605px;
+    width: 100%;
+}
+.list-chart img:first-child{
+    margin-top: -8px;
+}
+.table-time {
+    max-width: 324px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: linear-gradient(45deg, rgb(37 34 62), rgb(19 19 18 / 90%)) padding-box, linear-gradient(45deg, #5472F6 0%, #DD3EF0 100%) border-box;
+    border: 1px solid transparent;
+    border-radius: 25px;
+    color: #fff;
+    column-gap: 22px;
+    row-gap: 22px;
+    border: 1px solid transparent;
+    border-radius: 25px;
+    color: #fff;
+    padding: 20px;
+}
+.btn-time {
+    padding: 0;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: -0.05em;
+    font-weight: bold;
+}
+.btn-time:hover, .btn-time.active{
+    background: linear-gradient(#fff, #fff) padding-box, linear-gradient(45deg, #5472F6 0%, #DD3EF0 100%) border-box;
+    border: 1px solid transparent;
+}
+.btn-time:hover span, .btn-time.active span{
+    background: linear-gradient(195deg, #DD3EF0 0%, #5472F6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.section7 {
+    position: relative;
+}
+.table-time {
+    position: absolute;
+    top: 90px;
+    right: 0;
+}
