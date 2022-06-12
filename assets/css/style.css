@@ -183,7 +183,7 @@
 .section1 .external-info .item:hover {
     border-color: #fff;
     cursor: pointer;
-    background: linear-gradient(270deg, rgb(37 34 62), rgb(19 19 18 / 90%)) padding-box, linear-gradient(45deg, #5472F6 0%, #DD3EF0 100%) border-box;
+    background: linear-gradient(45deg, rgb(37 34 62), rgb(19 19 18 / 70%)) padding-box, linear-gradient(45deg, #5472F6 0%, #DD3EF0 100%) border-box;
 }
 
 .section1 .external-info .item:hover .icon-hover {
