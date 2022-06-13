@@ -248,21 +248,10 @@
     align-items: center;
     flex-flow: column;
     justify-content: center;
-    background: linear-gradient(45deg, #5472F6 0%, #DD3EF0 100%);
+    background: linear-gradient(90deg, rgb(37 34 62), rgb(19 19 18 / 85%)) padding-box, linear-gradient(45deg, #5472F6 0%, #DD3EF0 100%) border-box;
+    border: 1px solid transparent;
     position: relative;
     padding: 8px 32px 40px;
-}
-
-.list-item .item::before {
-    content: '';
-    background: #25223e;
-    top: 1px;
-    bottom: 1px;
-    left: 1px;
-    right: 1px;
-    position: absolute;
-    border-radius: 25px;
-    z-index: 2;
 }
 
 .list-item .item * {
@@ -769,6 +758,7 @@
     letter-spacing: -0.05em;
     font-weight: bold;
 }
+
 .headRow {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -782,16 +772,18 @@
     letter-spacing: -0.05em;
     font-weight: bold;
 }
-.headRow .divCell{
+
+.headRow .divCell {
     padding: 30px;
     position: relative;
 }
-.divRow .divCell{
+
+.divRow .divCell {
     padding: 30px 0;
     position: relative;
 }
 
-.divRow{
+.divRow {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     row-gap: 1px;
@@ -810,21 +802,25 @@
     top: 0;
     position: absolute;
 }
-.divCell .flex{
+
+.divCell .flex {
     display: flex;
     align-items: center;
 }
+
 .divCell .flex .bg-2 {
     background: #D9D9D9;
     width: 42px;
     height: 42px;
     border-radius: 50%;
 }
-.divCell .flex p{
+
+.divCell .flex p {
     flex: 1;
     text-align: center;
     margin-left: -42px;
 }
+
 .divRow:after {
     content: '';
     background: url(../images/icons/line.svg);
@@ -836,9 +832,11 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-.section8{
+
+.section8 {
     margin-bottom: 120px;
 }
+
 .btn-loadMore {
     background: linear-gradient(45deg, #5472F6 0%, #DD3EF0 100%);
     border-radius: 10px;
@@ -847,9 +845,11 @@
     display: inherit;
     border: 1px solid transparent;
 }
-.btn-loadMore:hover{
+
+.btn-loadMore:hover {
     border-color: #fff;
 }
+
 .list-chart {
     max-width: 1240px;
     margin: 0 auto;
@@ -859,13 +859,16 @@
     row-gap: 7px;
     margin-bottom: 80px;
 }
-.list-chart img{
+
+.list-chart img {
     max-width: 605px;
     width: 100%;
 }
-.list-chart img:first-child{
+
+.list-chart img:first-child {
     margin-top: -8px;
 }
+
 .table-time {
     max-width: 324px;
     display: grid;
@@ -881,6 +884,7 @@
     color: #fff;
     padding: 20px;
 }
+
 .btn-time {
     padding: 0;
     color: #fff;
@@ -892,20 +896,66 @@
     letter-spacing: -0.05em;
     font-weight: bold;
 }
-.btn-time:hover, .btn-time.active{
+
+.btn-time:hover,
+.btn-time.active {
     background: linear-gradient(#fff, #fff) padding-box, linear-gradient(45deg, #5472F6 0%, #DD3EF0 100%) border-box;
     border: 1px solid transparent;
 }
-.btn-time:hover span, .btn-time.active span{
+
+.btn-time:hover span,
+.btn-time.active span {
     background: linear-gradient(195deg, #DD3EF0 0%, #5472F6 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 .section7 {
     position: relative;
 }
+
 .table-time {
     position: absolute;
     top: 90px;
     right: 0;
+}
+
+.wrapper-heading-gradient {
+    position: relative;
+    text-align: center;
+}
+
+.wrapper-heading-gradient .animate-gradient {
+    background-size: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.wrapper-heading-gradient .animate-gradient span {
+    background-size: 50%;
+    background-image: -webkit-gradient(linear, left top, right top, from(hsla(0, 0%, 100%, 0)), color-stop(50%, hsla(0, 0%, 100%, .4)), to(hsla(0, 0%, 100%, 0)));
+    background-image: linear-gradient(90deg, hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, .4) 50%, hsla(0, 0%, 100%, 0));
+    -webkit-transition-property: none;
+    transition-property: none;
+    animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+    0% {
+        background-position: -100%;
+
+    }
+    30% {
+        background-position: 100%;
+
+    }
+    100% {
+        background-position: -100%;
+
+    }
+
+
 }
