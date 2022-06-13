@@ -29,7 +29,12 @@
 	}
 }
 @media(max-width: 991px){
-	
+	.timeline h3, .timeline .content{
+		margin-bottom: 64px;
+	}
+	.timeline .container::after {
+		top: calc(50% - 32px);
+	}
 	.social-media-menu{
 		display: none;
 	}

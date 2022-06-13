@@ -961,14 +961,147 @@
         background-position: -100%;
 
     }
+
     30% {
         background-position: 100%;
 
     }
+
     100% {
         background-position: -100%;
 
     }
 
 
+}
+
+.timeline {
+    position: relative;
+    max-width: 1420px;
+    margin: 0 auto;
+    padding-top: 64px;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, #5472F6 0%, #DD3EF0 100%);
+}
+
+/* Container around content */
+.timeline .container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+/* The circles on the timeline */
+.timeline .container::after {
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 50%;
+    background: linear-gradient(90deg, #5472F6 0%, #DD3EF0 100%);
+    top: calc(50% - 57px);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+
+/* The actual content */
+.timeline .content {
+    padding: 32px 24px;
+    position: relative;
+    background: linear-gradient(45deg, rgba(84, 114, 246, 0.1) 0%, rgba(221, 62, 240, 0.1) 100%);
+    border-radius: 25px;
+    letter-spacing: -0.05em;
+    line-height: 24px;
+    margin-bottom: 114px;
+    flex-basis: 50%;
+    margin-right: 46px;
+}
+.timeline h3{
+    -webkit-text-fill-color: #131313;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #7c63f4;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 44px;
+    flex-basis: 50%;
+    margin-bottom: 114px;
+    margin-left: 46px;
+    letter-spacing: -0.05em;
+}
+.timeline .right .content {
+    margin-left: 46px;
+    margin-right: 0;
+}
+.timeline .right h3 {
+    margin-right: 46px;
+    margin-left: 0;
+    text-align: right;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 767px) {
+
+    /* Place the timelime to the left */
+    .timeline::after {
+        left: 15px;
+    }
+
+    /* Full-width containers */
+    .timeline .container {
+        width: 100%;
+        padding-left: 54px;
+        display: flex;
+        flex-flow: column-reverse;
+        justify-content: center;
+        align-items: flex-start;
+        padding-right: 0;
+    }
+
+    /* Make sure that all arrows are pointing leftwards */
+    .timeline .container::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+    .timeline .right h3 {
+        text-align: left;
+    }
+    .timeline .right{
+        flex-flow: column;
+    }
+
+    .timeline h3{
+        font-size: 48px;
+    }
+
+    .timeline h3, .timeline .content {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+        margin-bottom: 32px !important;
+    }
+
+    /* Make sure all circles are at the same spot */
+    .timeline .left::after,
+    .timeline .right::after {
+        left: 15px;
+    }
+}
+.section4 .sub-title {
+    margin-bottom: 64px;
 }
