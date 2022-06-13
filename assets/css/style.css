@@ -1105,3 +1105,29 @@
 .section4 .sub-title {
     margin-bottom: 64px;
 }
+.list-item--light .item:before {
+    content: '';
+    background: radial-gradient(49.8% 49.95% at 40.28% 59.25%, #FFFFFF 0%, rgba(247, 247, 247, 0.97) 2%, rgba(190, 190, 190, 0.74) 13%, rgba(139, 139, 139, 0.54) 25%, rgba(96, 96, 96, 0.38) 37%, rgba(61, 61, 61, 0.24) 49%, rgba(34, 34, 34, 0.14) 62%, rgba(15, 15, 15, 0.06) 74%, rgba(4, 4, 4, 0.01) 87%, rgba(0, 0, 0, 0) 100%);
+    background-blend-mode: color-dodge;
+    mix-blend-mode: color-dodge;
+    transform: matrix(0.58, 0.62, -1.5, 2.5, 0, 0) skewY(346deg);
+    position: absolute;
+    top: -5px;
+    left: 60%;
+    right: 0;
+    z-index: 999;
+    height: 6px;
+    width: auto;
+}
+.list-item--light .item:nth-child(2):before, .list-item--light .item:nth-child(6):before{
+    top: auto;
+    bottom: -2px;
+    left: -30%;
+}
+.list-item--light .item:nth-child(3):before{
+    left: -30%;
+}
+.list-item--light .item:nth-child(4):before{
+    top: auto;
+    bottom: -2px;
+}
